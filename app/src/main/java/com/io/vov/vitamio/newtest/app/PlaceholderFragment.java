@@ -32,6 +32,7 @@ public class PlaceholderFragment  extends Fragment {
     }
 
     public PlaceholderFragment() {
+
     }
 
     @Override
