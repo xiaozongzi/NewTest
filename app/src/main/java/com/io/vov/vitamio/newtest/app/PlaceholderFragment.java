@@ -2,23 +2,31 @@ package com.io.vov.vitamio.newtest.app;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import com.io.vov.vitamio.libray.lib.BaseFragment;
+import com.io.vov.vitamio.newtest.app.adapter.ListViewAdapter;
+import com.io.vov.vitamio.newtest.app.bean.ListObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by ${zhangzz} on 2016/4/7.
  */
-public class PlaceholderFragment  extends Fragment {
+public class PlaceholderFragment  extends BaseFragment {
     /**
      * The fragment argument representing the section number for this
      * fragment.
      */
     private ListView listView;
     private static final String ARG_SECTION_NUMBER = "section_number";
-
+    private ListViewAdapter adapter;
+    private List<ListObject> listObjects;
     /**
      * Returns a new instance of this fragment for the given section
      * number.
@@ -42,11 +50,40 @@ public class PlaceholderFragment  extends Fragment {
         return rootView;
     }
 
-    private void init(View view) {
-        listView= (ListView) view.findViewById(R.id.list_view);
-
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getList();
+        adapter.setListObjects(listObjects);
+        listView.setItemChecked(5,true);
+        listView.setItemsCanFocus(false);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                showToast("点击"+position);
+            }
+        });
     }
 
+    private void init(View view) {
+        listView= (ListView) view.findViewById(R.id.list_view);
+        adapter=new ListViewAdapter(getActivity());
+        listView.setAdapter(adapter);
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+    }
+    private void getList(){
+        listObjects=new ArrayList<ListObject>();
+        ListObject object=new ListObject();
+        object.setName("dfdf");
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+    }
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
