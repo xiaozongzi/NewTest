@@ -27,7 +27,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Paint.Style;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -35,7 +34,6 @@ import org.xclcharts.chart.PieChart;
 import org.xclcharts.chart.PieData;
 import org.xclcharts.common.DensityUtil;
 import org.xclcharts.common.MathHelper;
-import org.xclcharts.event.click.ArcPosition;
 import org.xclcharts.renderer.XEnum;
 import org.xclcharts.renderer.plot.PlotLegend;
 
@@ -79,7 +77,7 @@ public class PieChart02View extends DemoView implements Runnable {
 		 chartRender();
 		 
 		//綁定手势滑动事件
-			this.bindTouch(this,chart);
+		//	this.bindTouch(this,chart);
 		 new Thread(this).start();
 	 }	 		 	
 	
@@ -151,16 +149,16 @@ public class PieChart02View extends DemoView implements Runnable {
 		//用图库中的MathHelper.getInstance()来做运算,以保证总值为100%
 		
 		//设置图表数据源				
-		PieData pieData = new PieData("芝麻","芝麻:15%",15, Color.rgb(77, 83, 97)) ;
+		PieData pieData = new PieData("芝麻","芝麻:15%",50, Color.rgb(77, 83, 97)) ;
 		pieData.setCustLabelStyle(XEnum.SliceLabelStyle.INSIDE, Color.WHITE);
-		
+
 		//pieData.setItemLabelRotateAngle(rotateAngle)
 		
 		chartData.add(pieData);
 				
-		chartData.add(new PieData("白糖","白糖(5%)",5, Color.rgb(75, 132, 1)));
+		chartData.add(new PieData("白糖","白糖(5%)",50, Color.rgb(75, 132, 1)));
 		
-		//将此比例块突出显示		
+	/*	//将此比例块突出显示
 		PieData pd = new PieData("花生","花生:35%",35, Color.rgb(180, 205, 230));
 		pd.setItemLabelRotateAngle(45.f);
 		chartData.add(pd);
@@ -171,7 +169,7 @@ public class PieChart02View extends DemoView implements Runnable {
 		
 		PieData pdTea = new PieData("茶叶","茶叶(30%)",30, Color.rgb(253, 180, 90),true);
 		pdTea.setCustLabelStyle(XEnum.SliceLabelStyle.OUTSIDE, Color.rgb(253, 180, 90));
-		chartData.add(pdTea);			
+		chartData.add(pdTea);	*/
 	}
 	@Override
 	public void render(Canvas canvas) {
@@ -182,7 +180,10 @@ public class PieChart02View extends DemoView implements Runnable {
 	        	Log.e(TAG, e.toString());
 	        }
 	}
-
+	public void setPercent(){
+		chartData.get(0).setPercentage(30);
+		chartData.get(1).setPercentage(70);
+	}
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
@@ -198,8 +199,9 @@ public class PieChart02View extends DemoView implements Runnable {
 
 	//触发监听
 	private void triggerClick(float x,float y)
-	{		
-		if(!chart.getListenItemClickStatus())return;
+	{
+		setPercent();
+	/*	if(!chart.getListenItemClickStatus())return;
 		ArcPosition record = chart.getPositionRecord(x,y);
 		if( null == record) return;
 		
@@ -219,13 +221,13 @@ public class PieChart02View extends DemoView implements Runnable {
 					cData.setSelected(true);	
 				}
 			}else
-				cData.setSelected(false);			
+				cData.setSelected(false);
 		}
 		
 		
 		//显示选中框
 		chart.showFocusArc(record,pData.getSelected());
-		chart.getFocusPaint().setStyle(Style.STROKE);
+		chart.getFocusPaint().setStyle(Paint.Style.STROKE);
 		chart.getFocusPaint().setStrokeWidth(5);		
 		chart.getFocusPaint().setColor(Color.GREEN);
 		chart.getFocusPaint().setAlpha(100);
@@ -235,9 +237,9 @@ public class PieChart02View extends DemoView implements Runnable {
 		mPaintToolTip.setColor(Color.RED);
 		chart.getToolTip().setCurrentXY(x,y);		
 		chart.getToolTip().addToolTip(" key:" + pData.getKey() +
-							" Label:" + pData.getLabel(),mPaintToolTip);	
+							" Label:" + pData.getLabel(),mPaintToolTip);	*/
 											
-		this.refreshChart();						
+		this.refreshChart();
 	}
 	
 	

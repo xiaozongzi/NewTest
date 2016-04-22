@@ -151,8 +151,8 @@ public class ChartsActivity extends Activity {
 		   
 		   //图表显示范围在占屏幕大小的90%的区域内
 		   DisplayMetrics dm = getResources().getDisplayMetrics();
-		   int scrWidth = (int) (dm.widthPixels * 0.9); 	
-		   int scrHeight = (int) (dm.heightPixels * 0.9); 			   		
+		   int scrWidth = (int) (dm.widthPixels * 0.4);
+		   int scrHeight = (int) (dm.heightPixels * 0.4);
 	       RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
 	    		   													scrWidth, scrHeight);
 	       
@@ -162,7 +162,7 @@ public class ChartsActivity extends Activity {
            final RelativeLayout chartLayout = new RelativeLayout(this);
       
            chartLayout.addView( mCharts[mSelected], layoutParams);
-  
+
 	        //增加控件
 		   ((ViewGroup) content).addView(chartLayout);
 		   //((ViewGroup) content).addView(mZoomControls);
