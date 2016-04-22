@@ -152,8 +152,8 @@ public class PieChart02View extends DemoView implements Runnable {
 		PieData pieData = new PieData("芝麻","芝麻:15%",50, Color.rgb(77, 83, 97)) ;
 		pieData.setCustLabelStyle(XEnum.SliceLabelStyle.INSIDE, Color.WHITE);
 
-		//pieData.setItemLabelRotateAngle(rotateAngle)
-		
+		pieData.setItemLabelRotateAngle(45.f);
+		pieData.setSelected(true);
 		chartData.add(pieData);
 				
 		chartData.add(new PieData("白糖","白糖(5%)",50, Color.rgb(75, 132, 1)));

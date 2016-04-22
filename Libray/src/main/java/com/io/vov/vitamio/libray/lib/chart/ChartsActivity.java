@@ -161,7 +161,7 @@ public class ChartsActivity extends Activity {
            //图表view放入布局中，也可直接将图表view放入Activity对应的xml文件中
            final RelativeLayout chartLayout = new RelativeLayout(this);
       
-           chartLayout.addView( mCharts[mSelected], layoutParams);
+           chartLayout.addView(mCharts[mSelected], layoutParams);
 
 	        //增加控件
 		   ((ViewGroup) content).addView(chartLayout);
