@@ -1,6 +1,7 @@
 package com.io.vov.vitamio.newtest.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import com.io.vov.vitamio.libray.lib.BaseFragment;
+import com.io.vov.vitamio.libray.lib.chart.ChartsActivity;
 import com.io.vov.vitamio.newtest.app.adapter.ListViewAdapter;
 import com.io.vov.vitamio.newtest.app.bean.ListObject;
 
@@ -61,6 +63,8 @@ public class PlaceholderFragment  extends BaseFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 showToast("点击"+position);
+                Intent intent=new Intent(getActivity(), ChartsActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -70,6 +74,7 @@ public class PlaceholderFragment  extends BaseFragment {
         adapter=new ListViewAdapter(getActivity());
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+
     }
     private void getList(){
         listObjects=new ArrayList<ListObject>();
