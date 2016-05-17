@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import com.io.vov.vitamio.libray.lib.BaseFragment;
-import com.io.vov.vitamio.libray.lib.chart.ChartsActivity;
+import com.io.vov.vitamio.newtest.app.activity.test.TestActivity;
 import com.io.vov.vitamio.newtest.app.adapter.ListViewAdapter;
 import com.io.vov.vitamio.newtest.app.bean.ListObject;
 
@@ -62,8 +62,11 @@ public class PlaceholderFragment  extends BaseFragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                showToast("点击"+position);
-                Intent intent=new Intent(getActivity(), ChartsActivity.class);
+                //showToast("点击"+position);
+//                Intent intent=new Intent(getActivity(), ChartsActivity.class);
+                Intent intent=new Intent(getActivity(), TestActivity.class);
+                intent.putExtra("object",listObjects.get(position));
+                intent.putExtra("secondObject",listObjects.get(position));
                 startActivity(intent);
             }
         });
