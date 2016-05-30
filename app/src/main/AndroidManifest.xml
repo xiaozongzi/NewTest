@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".activity.ExamVideo"/>
         <activity android:name=".activity.test.TestActivity"/>
+        <activity android:name=".internet.internetActivity"/>
         <activity android:name="com.io.vov.vitamio.libray.lib.chart.ChartsActivity"/>
 
 

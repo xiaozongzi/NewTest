@@ -64,12 +64,19 @@ public class PlaceholderFragment  extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //showToast("点击"+position);
 //                Intent intent=new Intent(getActivity(), ChartsActivity.class);
-                Intent intent=new Intent(getActivity(), TestActivity.class);
-                intent.putExtra("object",listObjects.get(position));
-                intent.putExtra("secondObject",listObjects.get(position));
-                startActivity(intent);
+//                gotoTest(position);
+         /*       Intent intent=new Intent(getActivity(), internetActivity.class);
+                startActivity(intent);*/
+                gotoTest(0);
             }
         });
+    }
+
+    private void gotoTest(int position) {
+        Intent intent=new Intent(getActivity(), TestActivity.class);
+        intent.putExtra("object",listObjects.get(position));
+        intent.putExtra("secondObject",listObjects.get(position));
+        startActivity(intent);
     }
 
     private void init(View view) {
