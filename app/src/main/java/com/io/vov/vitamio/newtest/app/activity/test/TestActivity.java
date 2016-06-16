@@ -1,6 +1,7 @@
 package com.io.vov.vitamio.newtest.app.activity.test;
 
 import android.os.Bundle;
+import android.widget.CheckBox;
 import com.io.vov.vitamio.libray.lib.BaseActivity;
 import com.io.vov.vitamio.newtest.app.R;
 import com.io.vov.vitamio.newtest.app.bean.BaseBean;
@@ -11,11 +12,14 @@ import io.vov.vitamio.utils.Log;
  */
 public class TestActivity extends BaseActivity {
     private BaseBean object,secondObject;
+    CheckBox checkBox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_activity_layout);
         getIntentData();
+        checkBox= (CheckBox) findViewById(R.id.checkbox);
+//        checkBox.setButtonDrawable(new TryDrawable());
     }
 
     private void getIntentData() {

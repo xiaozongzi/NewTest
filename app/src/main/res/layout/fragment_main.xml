@@ -9,12 +9,13 @@
                 tools:context=".MainActivity$PlaceholderFragment">
     <ListView android:layout_width="match_parent"
               android:id="@+id/list_view"
-              android:visibility="gone"
+              android:visibility="visible"
               android:cacheColorHint="@android:color/transparent"
               android:layout_height="match_parent"></ListView>
-    <fragment android:layout_width="match_parent"
+<!--    <fragment android:layout_width="match_parent"
               android:name="com.io.vov.vitamio.newtest.app.TestFragment"
               android:id="@+id/content_fragment"
               android:layout_height="match_parent"
-              tools:layout="@layout/test_fragment"/>
+
+              tools:layout="@layout/test_fragment"/>-->
 </RelativeLayout>

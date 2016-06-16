@@ -4,5 +4,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
+  <style name="check_box" parent="Base.Widget.AppCompat.CompoundButton.CheckBox">
+        <!-- Customize your theme here. -->
+      <item name="android:button">@drawable/abc_btn_check_material</item>
+    </style>
 
 </resources>
