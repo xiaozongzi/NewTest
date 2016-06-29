@@ -17,6 +17,7 @@ public class PartDrawable extends Drawable {
     private final int dump=10;
     private int radiusDump=5;
     private int degree=150;
+
     PointF liftArcLiftAndTopPoint,liftArcRightAndBottomPoint,liftRectTopPoint,liftRectBottomPoint,
             liftRightArcTopPoint,liftRightArcBottomPoint;
     public PartDrawable(int with,int height) {
