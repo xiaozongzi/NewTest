@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 
 /**
  * Created by ${zhangzz} on 2016/6/21.
+ * 标签drawable
  */
 public class PartDrawable extends Drawable {
     private Paint liftPaint;
