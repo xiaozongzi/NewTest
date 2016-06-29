@@ -13,6 +13,7 @@ import com.io.vov.vitamio.libray.lib.R;
 public class TryTextView extends View implements Checkable {
     TryDrawable drawable;
     RectTestDrawable rectTestDrawable;
+    private PartDrawable partDrawable;
     boolean checked;
     public TryTextView(Context context) {
         this(context,null);
@@ -36,22 +37,23 @@ public class TryTextView extends View implements Checkable {
 //        drawable.setStrokColor(getResources().getColor(R.color.try_color));
         drawable.setCallback(this);
 //        setCompoundDrawables(null,null,null,drawable);
-        setOnClickListener(new OnClickListener() {
+       /* setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 toggle();
                 invalidate();
             }
-        });
+        });*/
         rectTestDrawable=new RectTestDrawable();
+        partDrawable=new PartDrawable(getMeasuredWidth(),getMeasuredHeight());
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        drawable.draw(canvas);
+//        drawable.draw(canvas);
 //        rectTestDrawable.draw(canvas);
-
+            partDrawable.draw(canvas);
     }
 
     @Override
