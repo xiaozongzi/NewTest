@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.io.vov.vitamio.newtest.app" >
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/hello_world"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
@@ -22,12 +23,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ExamVideo"/>
-        <activity android:name=".activity.test.TestActivity"/>
-        <activity android:name=".internet.internetActivity"/>
-        <activity android:name="com.io.vov.vitamio.libray.lib.chart.ChartsActivity"/>
-
-
+        <activity android:name=".activity.ExamVideo" />
+        <activity android:name=".activity.test.TestActivity" />
+        <activity android:name=".activity.test.TestDesgin" />
+        <activity android:name=".internet.internetActivity" />
+        <activity android:name="com.io.vov.vitamio.libray.lib.chart.ChartsActivity" />
+        <activity
+            android:name=".activity.test.VideoActivity"
+            android:label="@string/title_activity_video"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.io.vov.vitamio.newtest.app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.test.TestListView"
+            android:label="@string/title_activity_test_list_view" >
+        </activity>
     </application>
 
 </manifest>
