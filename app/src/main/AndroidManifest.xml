@@ -12,8 +12,12 @@
 
     <application
         android:allowBackup="true"
+        android:name=".MyApplication"
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/AppTheme" >
+        <meta-data
+                android:name="com.netease.nim.appKey"
+                android:value="5380f881b6c172834ca1c9d4dc4e4d06" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -40,6 +44,20 @@
             android:name=".activity.test.TestListView"
             android:label="@string/title_activity_test_list_view" >
         </activity>
+        <activity
+            android:name=".activity.test.Main2Activity"
+            android:label="@string/title_activity_main2" >
+        </activity>
+        <activity
+            android:name=".activity.test.Main3Activity"
+            android:label="@string/title_activity_main3" >
+        </activity>
+       <!-- <application android:allowBackup="true">
+            <activity
+                    android:name=".activity.test.Main3Activity"
+                    android:label="@string/title_activity_main3" >
+            </activity>
+        </application>-->
     </application>
 
 </manifest>

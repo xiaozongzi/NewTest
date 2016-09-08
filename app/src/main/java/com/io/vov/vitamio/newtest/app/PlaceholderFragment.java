@@ -1,21 +1,24 @@
 package com.io.vov.vitamio.newtest.app;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import com.io.vov.vitamio.libray.lib.BaseFragment;
-import com.io.vov.vitamio.newtest.app.activity.test.TestActivity;
-import com.io.vov.vitamio.newtest.app.activity.test.TestDesgin;
-import com.io.vov.vitamio.newtest.app.activity.test.TestListView;
-import com.io.vov.vitamio.newtest.app.activity.test.VideoActivity;
+import com.io.vov.vitamio.newtest.app.activity.test.*;
 import com.io.vov.vitamio.newtest.app.adapter.ListViewAdapter;
 import com.io.vov.vitamio.newtest.app.bean.ListObject;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.RequestCallback;
+import com.netease.nimlib.sdk.auth.AuthService;
+import com.netease.nimlib.sdk.auth.LoginInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +28,7 @@ import java.util.List;
  */
 public class PlaceholderFragment extends BaseFragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
+    private static final String TAG                = "PlaceholderFragment";
     /**
      * The fragment argument representing the section number for this
      * fragment.
@@ -67,6 +71,7 @@ public class PlaceholderFragment extends BaseFragment {
         adapter.setListObjects(listObjects);
         listView.setItemChecked(5, true);
         listView.setItemsCanFocus(false);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -99,14 +104,91 @@ public class PlaceholderFragment extends BaseFragment {
             case 3:
                 intent.setClass(getContext(), TestListView.class);
                 break;
+            case 4:
+                intent.setClass(getContext(), Main2Activity.class);
+
+                break;
+             case 5:
+                intent.setClass(getContext(), Main3Activity.class);
+
+                break;
+
             default:
                 intent.setClass(getContext(), TestDesgin.class);
                 break;
         }
 
-        startActivity(intent);
+        LOGIN();
+//        startActivity(intent);
     }
 
+
+    private void LOGIN() {
+        final String account = "zhangzhongzhi";
+        final String token   = "zhangzhongzhi";
+        try {
+            NIMClient.getService(AuthService.class).
+                    login(new LoginInfo(account, token)).
+                    setCallback(new RequestCallback<LoginInfo>() {
+                        @Override
+                        public void onSuccess(LoginInfo param) {
+                            Log.e(TAG, "login success");
+
+//				onLoginDone();
+/*	DemoCache.setAccount(account);
+saveLoginInfo(account, token);
+*/
+// 初始化消息提醒
+//				NIMClient.toggleNotification(UserPreferences.getNotificationToggle());
+
+// 初始化免打扰
+/*	if (UserPreferences.getStatusConfig() == null) {
+UserPreferences.setStatusConfig(DemoCache.getNotificationConfig());
+}
+NIMClient.updateStatusBarNotificationConfig(UserPreferences.getStatusConfig());
+
+// 构建缓存
+DataCacheManager.buildDataCacheAsync();
+*//**/
+/*	// 进入主界面
+MainActivity.start(LoginActivity.this, null);
+finish();*/
+                        }
+
+
+                        @Override
+                        public void onFailed(int code) {
+//				onLoginDone();
+                            Log.e(TAG, "login shi" + code);
+
+                        }
+
+
+                        @Override
+                        public void onException(Throwable exception) {
+/*Toast.makeText(LoginActivity.this, R.string.login_exception, Toast.LENGTH_LONG).show();
+onLoginDone();*/
+                            Log.e(TAG, "login success" + exception.getMessage());
+                        }
+                    });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private static String readAppKey(Context context) {
+        try {
+            return "5380f881b6c172834ca1c9d4dc4e4d06";
+        /*	ApplicationInfo appInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
+			if (appInfo != null) {
+				return appInfo.metaData.getString("com.netease.nim.appKey");
+			}*/
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     private void init(View view) {
         listView = (ListView) view.findViewById(R.id.list_view);

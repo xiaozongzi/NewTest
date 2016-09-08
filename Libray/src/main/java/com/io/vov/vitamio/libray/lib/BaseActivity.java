@@ -19,6 +19,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        showLog("onCreate");
         startScreenBroadcastReceiver();
         PadOrPhone();
     }
@@ -28,6 +29,7 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onStop() {
+        showLog("onStop");
         super.onStop();
       /*  if (isAppOnForeground()){
             showToast("app foreground");
@@ -117,8 +119,38 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        showLog("onDestroy");
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        showLog("onResume");
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        showLog("onStart");
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        showLog("onPause");
 
     }
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        showLog("onRestart");
+    }
+
 
     /**
      * 需要权限:android.permission.GET_TASKS
@@ -163,5 +195,8 @@ public class BaseActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+    private void showLog(String msg){
+        Log.e("life_activity",msg);
     }
 }
