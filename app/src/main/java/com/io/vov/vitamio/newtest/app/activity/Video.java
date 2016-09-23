@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app.activity;
+package com.netease.nim.demo.activity;
 
 import android.content.Context;
 import android.net.Uri;

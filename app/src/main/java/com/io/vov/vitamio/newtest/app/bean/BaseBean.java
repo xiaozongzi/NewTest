@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app.bean;
+package com.netease.nim.demo.bean;
 
 import java.io.Serializable;
 

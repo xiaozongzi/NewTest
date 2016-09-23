@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app;
+package com.netease.nim.demo;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;

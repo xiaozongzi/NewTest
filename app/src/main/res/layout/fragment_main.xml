@@ -13,7 +13,7 @@
               android:cacheColorHint="@android:color/transparent"
               android:layout_height="match_parent"></ListView>
 <!--    <fragment android:layout_width="match_parent"
-              android:name="com.io.vov.vitamio.newtest.app.TestFragment"
+              android:name="com.netease.nim.demo.TestFragment"
               android:id="@+id/content_fragment"
               android:layout_height="match_parent"
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.io.vov.vitamio.newtest.app.activity;
+package com.netease.nim.demo.activity;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -23,7 +23,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.io.vov.vitamio.newtest.app.R;
+import com.netease.nim.demo.R;
 import io.vov.vitamio.MediaPlayer;
 import io.vov.vitamio.MediaPlayer.OnBufferingUpdateListener;
 import io.vov.vitamio.MediaPlayer.OnInfoListener;

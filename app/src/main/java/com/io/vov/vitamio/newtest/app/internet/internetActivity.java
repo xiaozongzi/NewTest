@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app.internet;
+package com.netease.nim.demo.internet;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.io.vov.vitamio.libray.lib.BaseActivity;
 import com.io.vov.vitamio.libray.lib.Internet.BaseHandler;
-import com.io.vov.vitamio.newtest.app.R;
+import com.netease.nim.demo.R;
 import okhttp3.FormBody;
 
 /**

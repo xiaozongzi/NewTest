@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.io.vov.vitamio.newtest.app.activity;
+package com.netease.nim.demo.activity;
 
 import android.app.Activity;
 import android.graphics.PixelFormat;
@@ -25,7 +25,7 @@ import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.io.vov.vitamio.newtest.app.R;
+import com.netease.nim.demo.R;
 import io.vov.vitamio.MediaPlayer;
 import io.vov.vitamio.MediaPlayer.OnPreparedListener;
 import io.vov.vitamio.MediaPlayer.OnTimedTextListener;

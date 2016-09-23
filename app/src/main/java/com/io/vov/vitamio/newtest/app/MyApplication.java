@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app;
+package com.netease.nim.demo;
 
 import android.app.Application;
 import com.netease.nimlib.sdk.NIMClient;

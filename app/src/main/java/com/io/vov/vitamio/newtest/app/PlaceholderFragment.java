@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app;
+package com.netease.nim.demo;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import com.io.vov.vitamio.libray.lib.BaseFragment;
-import com.io.vov.vitamio.newtest.app.activity.test.*;
-import com.io.vov.vitamio.newtest.app.adapter.ListViewAdapter;
-import com.io.vov.vitamio.newtest.app.bean.ListObject;
+import com.netease.nim.demo.activity.test.*;
+import com.netease.nim.demo.adapter.ListViewAdapter;
+import com.netease.nim.demo.bean.ListObject;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.auth.AuthService;

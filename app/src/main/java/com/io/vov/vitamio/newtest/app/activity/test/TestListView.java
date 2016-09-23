@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app.activity.test;
+package com.netease.nim.demo.activity.test;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.io.vov.vitamio.libray.lib.ui.HorizontalListView;
-import com.io.vov.vitamio.newtest.app.R;
+import com.netease.nim.demo.R;
 
 import java.util.ArrayList;
 import java.util.List;

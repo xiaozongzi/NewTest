@@ -1,10 +1,10 @@
-package com.io.vov.vitamio.newtest.app.activity.test;
+package com.netease.nim.demo.activity.test;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.io.vov.vitamio.libray.lib.BaseActivity;
-import com.io.vov.vitamio.newtest.app.R;
+import com.netease.nim.demo.R;
 
 public class Main3Activity extends BaseActivity {
 

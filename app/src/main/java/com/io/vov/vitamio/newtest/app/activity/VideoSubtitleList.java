@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.io.vov.vitamio.newtest.app.activity;
+package com.netease.nim.demo.activity;
 
 import android.app.ListActivity;
 import android.content.Intent;

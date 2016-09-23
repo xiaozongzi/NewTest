@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app.ui;
+package com.netease.nim.demo.ui;
 
 import android.annotation.TargetApi;
 import android.content.Context;

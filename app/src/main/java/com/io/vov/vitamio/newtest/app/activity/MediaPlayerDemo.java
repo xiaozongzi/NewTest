@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.io.vov.vitamio.newtest.app.activity;
+package com.netease.nim.demo.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -22,7 +22,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import com.io.vov.vitamio.newtest.app.R;
+import com.netease.nim.demo.R;
 
 public class MediaPlayerDemo extends Activity {
 	private Button mlocalvideo;

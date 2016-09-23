@@ -17,7 +17,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.io.vov.vitamio.newtest.app"
+        applicationId "com.netease.nim.demo"
         minSdkVersion 10
         targetSdkVersion 23
         versionCode 1

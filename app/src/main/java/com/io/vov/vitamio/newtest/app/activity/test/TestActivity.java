@@ -1,10 +1,10 @@
-package com.io.vov.vitamio.newtest.app.activity.test;
+package com.netease.nim.demo.activity.test;
 
 import android.os.Bundle;
 import android.widget.CheckBox;
 import com.io.vov.vitamio.libray.lib.BaseActivity;
-import com.io.vov.vitamio.newtest.app.R;
-import com.io.vov.vitamio.newtest.app.bean.BaseBean;
+import com.netease.nim.demo.R;
+import com.netease.nim.demo.bean.BaseBean;
 import io.vov.vitamio.utils.Log;
 
 /**

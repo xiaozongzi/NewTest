@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app.adapter;
+package com.netease.nim.demo.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.io.vov.vitamio.newtest.app.R;
+import com.netease.nim.demo.R;
 
 import java.util.List;
 

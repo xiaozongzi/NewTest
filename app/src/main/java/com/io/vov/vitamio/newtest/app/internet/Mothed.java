@@ -1,4 +1,4 @@
-package com.io.vov.vitamio.newtest.app.internet;
+package com.netease.nim.demo.internet;
 
 /**
  * Created by ${zhangzz} on 2016/2/19.
