@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.netease.nim.demo.activity;
+package com.io.vov.vitamio.newtest.app.activity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -26,7 +26,7 @@ import android.util.Log;
 import android.view.Surface;
 import android.view.TextureView;
 import android.widget.Toast;
-import com.netease.nim.demo.R;
+import com.io.vov.vitamio.newtest.app.R;
 import io.vov.vitamio.MediaPlayer;
 import io.vov.vitamio.MediaPlayer.OnBufferingUpdateListener;
 import io.vov.vitamio.MediaPlayer.OnCompletionListener;

@@ -1,4 +1,4 @@
-package com.netease.nim.demo;
+package com.io.vov.vitamio.newtest.app;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

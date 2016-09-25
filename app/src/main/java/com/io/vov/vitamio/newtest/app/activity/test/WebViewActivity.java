@@ -1,24 +1,30 @@
 package com.io.vov.vitamio.newtest.app.activity.test;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.io.vov.vitamio.libray.lib.BaseActivity;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import com.io.vov.vitamio.newtest.app.R;
 
-public class Main3Activity extends BaseActivity {
-
+public class WebViewActivity extends AppCompatActivity {
+    WebView web_view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_web_view);
+        web_view= (WebView) findViewById(R.id.web_view);
+        web_view.setWebViewClient(new WebViewClient(){
+
+        });
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main3, menu);
+        getMenuInflater().inflate(R.menu.menu_web_view, menu);
         return true;
     }
 

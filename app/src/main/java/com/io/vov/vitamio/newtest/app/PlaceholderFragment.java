@@ -1,4 +1,4 @@
-package com.netease.nim.demo;
+package com.io.vov.vitamio.newtest.app;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,9 +12,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import com.io.vov.vitamio.libray.lib.BaseFragment;
-import com.netease.nim.demo.activity.test.*;
-import com.netease.nim.demo.adapter.ListViewAdapter;
-import com.netease.nim.demo.bean.ListObject;
+import com.io.vov.vitamio.newtest.app.adapter.ListViewAdapter;
+import com.io.vov.vitamio.newtest.app.bean.ListObject;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.auth.AuthService;
@@ -51,6 +50,7 @@ public class PlaceholderFragment extends BaseFragment {
         Bundle              args     = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -91,30 +91,30 @@ public class PlaceholderFragment extends BaseFragment {
         switch (position) {
 
             case 0:
-                intent.setClass(getContext(), TestActivity.class);
+                intent.setClass(getContext(), com.io.vov.vitamio.newtest.app.activity.test.TestActivity.class);
                 intent.putExtra("object", listObjects.get(position));
                 intent.putExtra("secondObject", listObjects.get(position));
                 break;
             case 1:
-                intent.setClass(getContext(), TestDesgin.class);
+                intent.setClass(getContext(), com.io.vov.vitamio.newtest.app.activity.test.TestDesgin.class);
                 break;
             case 2:
-                intent.setClass(getContext(), VideoActivity.class);
+                intent.setClass(getContext(), com.io.vov.vitamio.newtest.app.activity.test.VideoActivity.class);
                 break;
             case 3:
-                intent.setClass(getContext(), TestListView.class);
+                intent.setClass(getContext(), com.io.vov.vitamio.newtest.app.activity.test.TestListView.class);
                 break;
             case 4:
-                intent.setClass(getContext(), Main2Activity.class);
+                intent.setClass(getContext(), com.io.vov.vitamio.newtest.app.activity.test.Main2Activity.class);
 
                 break;
              case 5:
-                intent.setClass(getContext(), Main3Activity.class);
+                intent.setClass(getContext(), com.io.vov.vitamio.newtest.app.activity.test.Main3Activity.class);
 
                 break;
 
             default:
-                intent.setClass(getContext(), TestDesgin.class);
+                intent.setClass(getContext(), com.io.vov.vitamio.newtest.app.activity.test.TestDesgin.class);
                 break;
         }
 
@@ -217,7 +217,7 @@ onLoginDone();*/
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        ((MainActivity) activity).onSectionAttached(
+        ((com.io.vov.vitamio.newtest.app.MainActivity) activity).onSectionAttached(
                 getArguments().getInt(ARG_SECTION_NUMBER));
     }
 }

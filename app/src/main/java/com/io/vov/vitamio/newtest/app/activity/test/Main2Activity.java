@@ -1,4 +1,4 @@
-package com.netease.nim.demo.activity.test;
+package com.io.vov.vitamio.newtest.app.activity.test;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.*;
 import com.io.vov.vitamio.libray.lib.BaseActivity;
 import com.io.vov.vitamio.libray.lib.BaseFragment;
-import com.netease.nim.demo.R;
+import com.io.vov.vitamio.newtest.app.R;
 
 import java.util.Locale;
 

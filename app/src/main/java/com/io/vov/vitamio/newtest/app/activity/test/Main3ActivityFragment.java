@@ -1,11 +1,11 @@
-package com.netease.nim.demo.activity.test;
+package com.io.vov.vitamio.newtest.app.activity.test;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.io.vov.vitamio.libray.lib.BaseFragment;
-import com.netease.nim.demo.R;
+import com.io.vov.vitamio.newtest.app.R;
 
 /**
  * A placeholder fragment containing a simple view.

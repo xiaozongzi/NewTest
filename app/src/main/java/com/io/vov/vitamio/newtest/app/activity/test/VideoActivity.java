@@ -1,4 +1,4 @@
-package com.netease.nim.demo.activity.test;
+package com.io.vov.vitamio.newtest.app.activity.test;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.widget.MediaController;
 import android.widget.VideoView;
 import com.io.vov.vitamio.libray.lib.BaseActivity;
-import com.netease.nim.demo.R;
+import com.io.vov.vitamio.newtest.app.R;
 
 public class VideoActivity extends BaseActivity {
     VideoView videoView;

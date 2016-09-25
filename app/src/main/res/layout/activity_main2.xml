@@ -3,4 +3,4 @@
                                    android:id="@+id/pager"
                                    android:layout_width="match_parent"
                                    android:layout_height="match_parent"
-                                   tools:context="com.netease.nim.demo.activity.test.Main2Activity"/>
+                                   tools:context="com.io.vov.vitamio.newtest.app.activity.test.Main2Activity"/>

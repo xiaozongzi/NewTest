@@ -1,4 +1,4 @@
-package com.netease.nim.demo.adapter;
+package com.io.vov.vitamio.newtest.app.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.bean.ListObject;
+import com.io.vov.vitamio.newtest.app.R;
+import com.io.vov.vitamio.newtest.app.bean.ListObject;
 
 import java.util.ArrayList;
 import java.util.List;

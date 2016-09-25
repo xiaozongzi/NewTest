@@ -1,4 +1,4 @@
-package com.netease.nim.demo.bean;
+package com.io.vov.vitamio.newtest.app.bean;
 
 /**
  * Created by ${zhangzz} on 2016/4/7.

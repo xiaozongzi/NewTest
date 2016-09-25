@@ -1,4 +1,4 @@
-package com.netease.nim.demo.internet;
+package com.io.vov.vitamio.newtest.app.internet;
 
 
 import com.io.vov.vitamio.libray.lib.Internet.BaseHandler;

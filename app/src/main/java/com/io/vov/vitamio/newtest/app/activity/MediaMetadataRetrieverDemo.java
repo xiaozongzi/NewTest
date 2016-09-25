@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.netease.nim.demo.activity;
+package com.io.vov.vitamio.newtest.app.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.netease.nim.demo.R;
+import com.io.vov.vitamio.newtest.app.R;
 import io.vov.vitamio.MediaMetadataRetriever;
 
 import java.io.IOException;

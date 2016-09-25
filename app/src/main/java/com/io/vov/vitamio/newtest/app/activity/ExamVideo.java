@@ -1,9 +1,9 @@
-package com.netease.nim.demo.activity;
+package com.io.vov.vitamio.newtest.app.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.ViewGroup;
-import com.netease.nim.demo.R;
+import com.io.vov.vitamio.newtest.app.R;
 import io.vov.vitamio.Vitamio;
 import io.vov.vitamio.utils.Log;
 

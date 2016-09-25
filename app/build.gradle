@@ -17,24 +17,14 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.netease.nim.demo"
+        applicationId "com.io.vov.vitamio.newtest.app"
         minSdkVersion 10
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-//        multiDexEnabled true
+        multiDexEnabled true
     }
-    sourceSets {
-        main {
-            manifest.srcFile 'src\\main\\AndroidManifest.xml'
-            java.srcDirs = ['src\\main\\java']
-            jniLibs.srcDirs = ['libs']
 
-//            renderscript.srcDirs = ['src']
-            res.srcDirs = ['src\\main\\res']
-        }
-
-    }
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
@@ -45,10 +35,7 @@ android {
         jumboMode true
         javaMaxHeapSize "4g"
     }
-    packagingOptions {
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE.txt'
-    }
+
     signingConfigs {
         debug { storeFile file("debug.keystore") }
 
@@ -61,7 +48,7 @@ android {
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.debug
+//            signingConfig signingConfigs.debug
 //            manifestPlaceholders = [ AMAP_KEY:"09fd4efd3e28e9bf1f449ecec7d34bfe" ]
         }
         release {
@@ -83,7 +70,7 @@ dependencies {
     compile 'com.github.bumptech.glide:okhttp-integration:1.3.1@aar'
     compile project(':Libray')
     compile project(':vitamio')
-
+    compile 'com.github.barteksc:android-pdf-viewer:2.1.0'
     /*  apply plugin: 'android-apt'
 
             compile 'com.github.hotchemi:permissionsdispatcher:2.1.3'

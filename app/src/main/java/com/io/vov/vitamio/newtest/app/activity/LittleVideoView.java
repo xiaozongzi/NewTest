@@ -1,4 +1,4 @@
-package com.netease.nim.demo.activity;
+package com.io.vov.vitamio.newtest.app.activity;
 
 import android.content.Context;
 import android.util.AttributeSet;
