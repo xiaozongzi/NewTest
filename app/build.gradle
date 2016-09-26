@@ -24,17 +24,7 @@ android {
         versionName "1.0"
 //        multiDexEnabled true
     }
-    sourceSets {
-        main {
-            manifest.srcFile 'src\\main\\AndroidManifest.xml'
-            java.srcDirs = ['src\\main\\java']
-            jniLibs.srcDirs = ['libs']
-
-//            renderscript.srcDirs = ['src']
-            res.srcDirs = ['src\\main\\res']
-        }
-
-    }
+ 
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
@@ -45,10 +35,7 @@ android {
         jumboMode true
         javaMaxHeapSize "4g"
     }
-    packagingOptions {
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE.txt'
-    }
+ 
     signingConfigs {
         debug { storeFile file("debug.keystore") }
 
@@ -82,7 +69,7 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.github.bumptech.glide:okhttp-integration:1.3.1@aar'
     compile project(':Libray')
-    compile project(':vitamio')
+  //  compile project(':vitamio')
 
     /*  apply plugin: 'android-apt'
 
