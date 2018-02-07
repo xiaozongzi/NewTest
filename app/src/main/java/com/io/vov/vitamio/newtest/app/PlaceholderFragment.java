@@ -14,10 +14,8 @@ import android.widget.ListView;
 import com.io.vov.vitamio.libray.lib.BaseFragment;
 import com.io.vov.vitamio.newtest.app.adapter.ListViewAdapter;
 import com.io.vov.vitamio.newtest.app.bean.ListObject;
-import com.netease.nimlib.sdk.NIMClient;
-import com.netease.nimlib.sdk.RequestCallback;
-import com.netease.nimlib.sdk.auth.AuthService;
-import com.netease.nimlib.sdk.auth.LoginInfo;
+import com.io.vov.vitamio.newtest.app.lifecycle.ActivityA;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,13 +78,35 @@ public class PlaceholderFragment extends BaseFragment {
 //                gotoTest(position);
          /*       Intent intent=new Intent(getActivity(), internetActivity.class);
                 startActivity(intent);*/
-                gotoTest(position);
+//                gotoTest(position);
             }
         });
     }
 
+    private void init(View view) {
+        listView = (ListView) view.findViewById(R.id.list_view);
+        adapter = new ListViewAdapter(getActivity());
+        listView.setAdapter(adapter);
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        Intent intent = new Intent(getActivity(), ActivityA.class);
+        startActivity(intent);
+    }
 
-    private void gotoTest(int position) {
+
+    private void getList() {
+        listObjects = new ArrayList<ListObject>();
+        ListObject object = new ListObject();
+        object.setName("dfdf");
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+        listObjects.add(object);
+    }
+ /*   private void gotoTest(int position) {
         Intent intent = new Intent();
         switch (position) {
 
@@ -135,24 +155,24 @@ public class PlaceholderFragment extends BaseFragment {
                             Log.e(TAG, "login success");
 
 //				onLoginDone();
-/*	DemoCache.setAccount(account);
+*//*	DemoCache.setAccount(account);
 saveLoginInfo(account, token);
-*/
+*//*
 // 初始化消息提醒
 //				NIMClient.toggleNotification(UserPreferences.getNotificationToggle());
 
 // 初始化免打扰
-/*	if (UserPreferences.getStatusConfig() == null) {
+*//*	if (UserPreferences.getStatusConfig() == null) {
 UserPreferences.setStatusConfig(DemoCache.getNotificationConfig());
 }
 NIMClient.updateStatusBarNotificationConfig(UserPreferences.getStatusConfig());
 
 // 构建缓存
 DataCacheManager.buildDataCacheAsync();
-*//**/
-/*	// 进入主界面
+*//**//**//*
+*//*	// 进入主界面
 MainActivity.start(LoginActivity.this, null);
-finish();*/
+finish();*//*
                         }
 
 
@@ -166,8 +186,8 @@ finish();*/
 
                         @Override
                         public void onException(Throwable exception) {
-/*Toast.makeText(LoginActivity.this, R.string.login_exception, Toast.LENGTH_LONG).show();
-onLoginDone();*/
+*//*Toast.makeText(LoginActivity.this, R.string.login_exception, Toast.LENGTH_LONG).show();
+onLoginDone();*//*
                             Log.e(TAG, "login success" + exception.getMessage());
                         }
                     });
@@ -180,38 +200,17 @@ onLoginDone();*/
     private static String readAppKey(Context context) {
         try {
             return "5380f881b6c172834ca1c9d4dc4e4d06";
-        /*	ApplicationInfo appInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
+        *//*	ApplicationInfo appInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
 			if (appInfo != null) {
 				return appInfo.metaData.getString("com.netease.nim.appKey");
-			}*/
+			}*//*
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    private void init(View view) {
-        listView = (ListView) view.findViewById(R.id.list_view);
-        adapter = new ListViewAdapter(getActivity());
-        listView.setAdapter(adapter);
-        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
-    }
-
-
-    private void getList() {
-        listObjects = new ArrayList<ListObject>();
-        ListObject object = new ListObject();
-        object.setName("dfdf");
-        listObjects.add(object);
-        listObjects.add(object);
-        listObjects.add(object);
-        listObjects.add(object);
-        listObjects.add(object);
-        listObjects.add(object);
-        listObjects.add(object);
-        listObjects.add(object);
-    }
 
 
     @Override
@@ -219,5 +218,5 @@ onLoginDone();*/
         super.onAttach(activity);
         ((com.io.vov.vitamio.newtest.app.MainActivity) activity).onSectionAttached(
                 getArguments().getInt(ARG_SECTION_NUMBER));
-    }
+    }*/
 }

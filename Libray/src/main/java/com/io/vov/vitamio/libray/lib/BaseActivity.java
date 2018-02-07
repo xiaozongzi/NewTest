@@ -43,7 +43,7 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * 为true，表示有两种状态：a、屏幕是黑的 b、目前正处于解锁状态 。
      为false，表示目前未锁屏
-        还可以通过广播来实现 {@value mScreenReceiver}
+        还可以通过广播来实现 {@value  mScreenReceiver}
      * @return
      */
     KeyguardManager mKeyguardManager;
@@ -126,7 +126,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        showLog("onResume");
+        showLog("onResume"+toString());
     }
 
 
